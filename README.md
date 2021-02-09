@@ -14,7 +14,7 @@ Principalmente los siguientes aspectos:
 ## IMPORTANTE
 1. Se requiere de una **cuenta de GitHub** para realizar este ejercicio.
 2. **Antes de comenzar a programar:**
-    * Realizar un `Fork` de este repositorio (https://github.com/ORCAapplicants/backend-test).
+    * Realizar un `Fork` de este repositorio (https://github.com/kambista/backend-test).
     * Clonar el fork a su máquina local  `git clone git@github.com:USERNAME/FORKED-PROJECT.git`
     * Crear un `branch` en su cuenta de GitHub utilizando su nombre completo.
 3. **Al finalizar**, existen 2 (dos) opciones para entregar su proyecto:
