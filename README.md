@@ -2,25 +2,25 @@
 La siguiente es una prueba para evaluar a los postulantes a programador **Back-end**.
 
 ## INTRODUCCIÓN
-Este repositorio contiene una serie de requerimientos de un Caso Práctico, que busca evaluar las capacidades técnicas del candidato con respecto a las principales funciones y responsabilidades que se requieren dentro del área de Desarrollo de Tecnología de _GCP Global_.
+Este repositorio contiene una serie de requerimientos de un Caso Práctico, que busca evaluar las capacidades técnicas del candidato con respecto a las principales funciones y responsabilidades que se requieren dentro del área de Desarrollo de Tecnología de _Kambista_.
 
 #### ¿Qué se busca evaluar?
 Principalmente los siguientes aspectos:
 * Creatividad para resolver los requerimientos,
-* Calidad del código entregado (estructura y buenas prácticas),
+* Calidad del código entregado (arquitectura limpia y buenas prácticas),
 * Eficiencia de los algoritmos entregados,
-* Familiaridad con Frameworks y plataformas de desarrollo.
+* Familiaridad con Frameworks y plataformas de desarrollo (Node + Typescript o Spring Boot).
 
 ## IMPORTANTE
-1. Recomendamos emplear un máximo de **3 (tres) horas** y enviar todo lo que puedas.
-2. Se requiere de una **cuenta de GitHub** para realizar este ejercicio.
-3. **Antes de comenzar a programar:**
+1. Se requiere de una **cuenta de GitHub** para realizar este ejercicio.
+2. **Antes de comenzar a programar:**
     * Realizar un `Fork` de este repositorio (https://github.com/ORCAapplicants/backend-test).
     * Clonar el fork a su máquina local  `git clone git@github.com:USERNAME/FORKED-PROJECT.git`
     * Crear un `branch` en su cuenta de GitHub utilizando su nombre completo.
-6. **Al finalizar**, existen 2 (dos) opciones para entregar su proyecto:
-    * 1) Realizar un `Commit` de su proyecto, **enviar un `Pull Request` al branch con su NOMBRE**, y notificar a la siguiente dirección de correo electrónico  [developer@gcpglobal.com](mailto:developer@gcpglobal.com).
-    * 2) Crear un archivo comprimido (_.zip_ o _.rar_) de su proyecto y enviar a la siguiente dirección de correo electrónico  [developer@gcpglobal.com](mailto:developer@gcpglobal.com).
+3. **Al finalizar**, existen 2 (dos) opciones para entregar su proyecto:
+    * 1) El proyecto debe poder ser desplegado a través de [docker-compose](https://docs.docker.com/compose/)
+    * 2) Realizar un `Commit` de su proyecto, **enviar un `Pull Request` al branch con su NOMBRE**, y notificar a la siguiente dirección de correo electrónico  [telentohumano@kambista.com](mailto:telentohumano@kambista.com).
+    * 3) Crear un archivo comprimido (_.zip_ o _.rar_) de su proyecto y enviar a la siguiente dirección de correo electrónico  [telentohumano@kambista.com](mailto:telentohumano@kambista.com).
 
 ## EJERCICIOS
 
@@ -77,7 +77,7 @@ S1234A 	    20134 				        1006.70
 La aplicación contará con un programa principal basado en un menú que permitirá al empleado interactuar con la aplicación (dicho programa principal no forma parte de este ejercicio).
 
 ##### Persistencia de datos
-La información de cada una de las estancias de los vehículos será almacenada en una base de datos. Debido a que el manejador de base de datos puede ser modificado en cualquier momento, se utilizará Hibernate como ORM.
+La información de cada una de las estancias de los vehículos será almacenada en una base de datos. Debido a que el manejador de base de datos puede ser modificado en cualquier momento.
 
 ##### Puntos que se deben desarrollar
 * Diagrama de clases y diagrama de secuencia  de las partes encargadas de la aplicación.
