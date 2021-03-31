@@ -71,8 +71,8 @@ La información de cada una de las estancias de los vehículos será almacenada 
 ##### Consideraciones.
 Para obtener la fecha y hora actual se utiliza la clase `Calendar`:
 ``` java
-Calendar unaFecha; // para almacenar una fecha
-unaFecha = Calendar.getInstance(); // obtiene la fecha actual
+Calendar date; // para almacenar una fecha
+date = Calendar.getInstance(); // obtiene la fecha actual
 ```
 Para obtener intervalos de tiempos entre dos fechas suponer que se dispone del método:
 ```java
@@ -81,5 +81,5 @@ Para obtener intervalos de tiempos entre dos fechas suponer que se dispone del m
 * @param final fecha final
 * @return diferencia final-inicial en minutos
 */
-private static int difEnMinutos(Calendar inicial, Calendar final) {...}
+private static int difInMinutes(Calendar start, Calendar end) {...}
 ```
