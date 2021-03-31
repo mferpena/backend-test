@@ -19,8 +19,8 @@ Principalmente los siguientes aspectos:
     * Crear un `branch` en su cuenta de GitHub utilizando su nombre completo.
 3. **Al finalizar**, existen 2 (dos) opciones para entregar su proyecto:
     * 1) El proyecto debe poder ser desplegado a través de [docker-compose](https://docs.docker.com/compose/)
-    * 2) Realizar un `Commit` de su proyecto, **enviar un `Pull Request` al branch con su NOMBRE**, y notificar a la siguiente dirección de correo electrónico  [telentohumano@kambista.com](mailto:telentohumano@kambista.com).
-    * 3) Crear un archivo comprimido (_.zip_ o _.rar_) de su proyecto y enviar a la siguiente dirección de correo electrónico  [telentohumano@kambista.com](mailto:telentohumano@kambista.com).
+    * 2) Realizar un `Commit` de su proyecto, **enviar un `Pull Request` al branch con su NOMBRE**, y notificar a la siguiente dirección de correo electrónico  [talentohumano@kambista.com](mailto:talentohumano@kambista.com).
+    * 3) Crear un archivo comprimido (_.zip_ o _.rar_) de su proyecto y enviar a la siguiente dirección de correo electrónico  [talentohumano@kambista.com](mailto:talentohumano@kambista.com).
 
 ## EJERCICIOS
 
