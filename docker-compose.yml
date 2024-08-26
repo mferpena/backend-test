@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  app:
+    image: mferpena/typescript-backend:latest
+    container_name: typescript-backend
+    ports:
+      - "5000:5000"
+    environment:
+      - MONGO_URI=mongodb://root:dev@mongo:27017/?authSource=admin
+      - PORT=5000
+      - RESIDENT_RATE=0.05
+      - NON_RESIDENT_RATE=0.5
+    command: [ "npm", "start" ]
+    depends_on:
+      - mongo
+
+  mongo:
+    image: mongo:6.0
+    container_name: mongo
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: dev
+    volumes:
+      - mongo-data:/data/db
+
+volumes:
+  mongo-data:

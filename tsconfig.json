@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "lib": ["es6", "dom"],
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "types": ["jest"],
+    "baseUrl": ".",
+    "paths": {
+      "@core/*": ["src/main/node/core/*"],
+      "@models/*": ["src/main/node/core/domain/models/*"],
+      "@ports/*": ["src/main/node/core/ports/*"],
+      "@usecases/*": ["src/main/node/core/usecases/*"],
+      "@controllers/*": ["src/main/node/infrastructure/primary/controllers/*"]
+    }
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
+}

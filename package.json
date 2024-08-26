@@ -1,0 +1,65 @@
+{
+  "name": "typescript-backend",
+  "version": "1.0.5",
+  "author": "mferpena",
+  "description": "",
+  "main": "dist/server.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "ts-node -r tsconfig-paths/register dist/main/node/App.js",
+    "dev": "nodemon",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "coverage": "jest --coverage"
+  },
+  "keywords": [
+    "typescript",
+    "backend"
+  ],
+  "license": "ISC",
+  "_moduleAliases": {
+    "@infra": "dist/main/node/infra",
+    "@core": "dist/main/node/core",
+    "@errors": "dist/main/node/core/domain/errors",
+    "@models": "dist/main/node/core/domain/models",
+    "@utilities": "dist/main/node/core/domain/utils",
+    "@ports": "dist/main/node/core/ports",
+    "@usecases": "dist/main/node/core/usecases"
+  },
+  "dependencies": {
+    "@types/mongoose": "^5.11.97",
+    "@types/winston": "^2.4.4",
+    "axios": "^1.7.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "joi": "^17.12.3",
+    "module-alias": "^2.2.3",
+    "moment": "^2.30.1",
+    "moment-timezone": "^0.5.45",
+    "mongodb": "^6.8.0",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1",
+    "tsconfig-paths": "^4.2.0",
+    "winston": "^3.13.0"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.3.17",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/jest": "^28.1.8",
+    "@types/mocha": "^10.0.7",
+    "@types/node": "^20.14.15",
+    "@types/supertest": "^6.0.2",
+    "@types/swagger-jsdoc": "^6.0.4",
+    "@types/swagger-ui-express": "^4.1.6",
+    "chai": "^5.1.1",
+    "jest": "^28.1.3",
+    "mocha": "^10.7.3",
+    "nodemon": "^2.0.15",
+    "supertest": "^7.0.0",
+    "ts-jest": "^28.0.8",
+    "ts-node": "^10.9.2",
+    "typescript": "^4.9.5"
+  }
+}

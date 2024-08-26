@@ -1,0 +1,36 @@
+# Node modules and TypeScript output
+node_modules
+dist
+
+# Logs
+*.log
+
+# Environment files
+.env
+
+# Build output directories
+build
+*.tsbuildinfo
+
+# IDE and editor folders
+.vscode
+.idea
+*.swp
+
+# Test coverage reports
+coverage
+*.lcov
+
+# Docker files
+Dockerfile
+docker-compose.yml
+
+# Git files
+.git
+.gitignore
+
+# npm package files
+package-lock.json
+yarn.lock
+
+.github

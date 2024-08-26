@@ -1,0 +1,68 @@
+name: CI/CD Pipeline
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    outputs:
+      PROJECT_NAME: ${{ steps.vars.outputs.PROJECT_NAME }}
+      VERSION: ${{ steps.vars.outputs.VERSION }}
+      AUTHOR: ${{ steps.vars.outputs.AUTHOR }}
+
+    steps:
+      - uses: actions/checkout@v4
+        name: Checkout code
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "21"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Extract project name, version, and author
+        id: vars
+        run: |
+          PROJECT_NAME=$(node -p "require('./package.json').name")
+          VERSION=$(node -p "require('./package.json').version")
+          AUTHOR=$(node -p "require('./package.json').author")
+          echo "::set-output name=PROJECT_NAME::$PROJECT_NAME"
+          echo "::set-output name=VERSION::$VERSION"
+          echo "::set-output name=AUTHOR::$AUTHOR"
+
+      - name: Build the Docker image
+        run: |
+          docker build . --file Dockerfile --tag ${{ steps.vars.outputs.PROJECT_NAME }}:latest
+
+      - name: Log in to Docker Hub
+        run: echo "${{ secrets.DOCKER_HUB_TOKEN }}" | docker login -u "${{ secrets.DOCKER_HUB_USERNAME }}" --password-stdin
+
+      - name: Tag and push Docker image to Docker Hub
+        run: |
+          TAG="${{ steps.vars.outputs.PROJECT_NAME }}:${{ steps.vars.outputs.VERSION }}"
+          docker tag ${{ steps.vars.outputs.PROJECT_NAME }}:latest ${{ secrets.DOCKER_HUB_USERNAME }}/$TAG
+          docker push ${{ secrets.DOCKER_HUB_USERNAME }}/$TAG
+
+  deploy:
+    needs: build
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Docker
+        run: |
+          docker stop typescript-backend || true
+          docker rm typescript-backend || true
+
+          docker pull mferpena/typescript-backend:latest
+
+          # Recrear el contenedor de la aplicación sin afectar MongoDB
+          docker-compose up -d --no-deps app
